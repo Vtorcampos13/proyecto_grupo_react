@@ -5,6 +5,46 @@
   text-align: center;
 }
 
+.digimon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Estilos para las tarjetas Digimon */
+.digimon-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  opacity: 1; /* Agrega opacidad inicial */
+  transition: opacity 0.3s ease-in-out; /* Agrega una transición de opacidad */
+}
+
+/* Estilos para ocultar las tarjetas antes de que se carguen las imágenes */
+.digimon-card.hidden {
+  opacity: 0;
+  pointer-events: none; /* Desactiva eventos en tarjetas ocultas */
+}
+
+/* Estilos para el nombre del Digimon */
+.digimon-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen del Digimon */
+.digimon-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilos para la lista de tipos del Digimon */
+.digimon-card h3 {
+  margin-top: 10px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
