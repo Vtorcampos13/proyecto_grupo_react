@@ -69,14 +69,13 @@ function App() {
         <img className="logo" src="https://cdn.discordapp.com/attachments/1100831940199858298/1176645632656670740/Mesa_de_trabajo_1digipedia_logo.png?ex=656f9fa3&is=655d2aa3&hm=12ec828dcbcce6f0bd4e69274e5f0ceac5c9cfdfe632e4498ac513e462856adc&" alt="Logo de Digipedia" />
       </header>
 
-      {/* Muestra un mensaje de error si se ha producido un error. */}
-      {error && <p className="Error"> {error}</p>}
+      
+    {error && <p className="Error"> {error}</p>}
 
       {/* Muestra botones de navegación si hay datos de Pokémon y hay una página anterior o siguiente. */}
       {digimonData.length !== 0 && previousUrl && <button onClick={goToPrevious}>Previous</button>}
       {digimonData.length !== 0 && nextUrl && <button onClick={goToNext}>Next</button>}
 
-      {/* Muestra un mensaje de carga si no hay datos de Pokémon. */}
       {digimonData.length === 0 && <p>Loading data...</p>}
 
       {/* Muestra la sección de contenedor de Pokémon, renderizando el componente 'Pokemon' para cada Pokémon en 'pokemonData'. */}
