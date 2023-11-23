@@ -36,12 +36,16 @@ const Digimon = ({ data }) => {
   };
 
   return (
-    <article className={className} onClick={handleToggleDetails}>
+    <article className={className} onClick={(e) =>{
+      e.stopPropagation(e);
+      handleToggleDetails()}}>
       <h2>{data.name.toUpperCase()}</h2>
       <img src={data.images[0].href} alt={`imagen de ${data.name}`} onLoad={() => setLoaded(true)} />
 
       <div>
-        <button onClick={handleToggleFavorite}>
+        <button onClick={(e) => {
+          e.stopPropagation(e);
+          handleToggleFavorite()}}>
           {isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
         </button>
       </div>
